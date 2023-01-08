@@ -4,23 +4,23 @@ mixin make_post(item, is_detail)
 			if is_current('about')
 				h1= item.title
 			else
-				h3
-					if is_detail
-						a= item.title
-					else
+				if is_detail
+					h1= item.title
+				else
+					h3
 						a(href= url_for(item.path))= item.title
 		if is_detail
 			.post-content
-			if is_current('about')
-				p!= item.content
-			else
-				p!= item.content
-				p(style={color: '#bbb', margin: '20px 0px 0px 0px'})
-					span= "The End. Thanks for your reading."
-				p(style={color: '#bbb', margin: '5px 0px 8px 0px'})
-					span= "文章发表遵循 CC BY-NC-SA 4.0 协议，如需引用请注明来源，感谢。"
-				if theme.copyright.show
-					.tip!= (item.copyright || theme.copyright.default) + "<br>" + __("author") + ": " + (item.author || theme.author)
+				if is_current('about')
+					p!= item.content
+				else
+					p!= item.content
+					p(style={color: '#bbb', margin: '20px 0px 0px 0px'})
+						span= "The End. Thanks for your reading."
+					p(style={color: '#bbb', margin: '5px 0px 8px 0px'})
+						span= "文章发表遵循 CC BY-NC-SA 4.0 协议，如需引用请注明来源，感谢。"
+					if theme.copyright.show
+						.tip!= (item.copyright || theme.copyright.default) + "<br>" + __("author") + ": " + (item.author || theme.author)
 		else
 			.post-content
 				if theme.useSummary
