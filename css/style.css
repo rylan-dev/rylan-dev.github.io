@@ -26,7 +26,7 @@ html {
   background: #bbb;
 }
 body {
-  color: rgba(0,0,0,0.9);
+  color: rgba(0,0,0,0.8);
   font-family: 'Source Han Sans SC', 'Noto Sans CJK SC', 'HanHei SC', '方正兰亭黑_GB18030', '方正兰亭黑_GBK', system-ui, -apple-system, ui-sans-serif, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji', emoji;
   font-size: 15px;
   width: 100%;
@@ -235,7 +235,7 @@ a:active {
 .post .post-title h1 {
   text-transform: none;
   font-size: 30px;
-  letter-spacing: 5px;
+  letter-spacing: 4px;
   line-height: 1;
 }
 .post .post-title h2 {
